@@ -18,6 +18,13 @@ class KeyboardViewController: UIInputViewController {
         // Add custom view sizing constraints here
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true);
+        
+        let heightConstraint:NSLayoutConstraint = NSLayoutConstraint(item: self.view, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0.0, constant: 245);
+        self.view.addConstraint(heightConstraint);
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,6 +41,8 @@ class KeyboardViewController: UIInputViewController {
         
         self.nextKeyboardButton.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
         self.nextKeyboardButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        
+        addTmpBtns();
     }
     
     override func didReceiveMemoryWarning() {
@@ -56,6 +65,29 @@ class KeyboardViewController: UIInputViewController {
             textColor = UIColor.black
         }
         self.nextKeyboardButton.setTitleColor(textColor, for: [])
+    }
+    
+    func addTmpBtns() {
+        let btnWidth = UIScreen.main.bounds.size.width/10;
+        print("this device's inputkey width is \(btnWidth)");
+        for i in 0...3 {
+            for j in 0...9 {
+                let newbtn1 = UIButton(type: .roundedRect);
+                //newbtn1.frame = CGRect(x:j*btnWidth , y: i*48+48, width: btnWidth, height: 48);
+                newbtn1.frame = CGRect(x: j*Int(btnWidth), y: i*48+48, width: Int(btnWidth), height: 48)
+                newbtn1.setTitle("j", for: UIControlState.normal);
+                newbtn1.setTitleColor(UIColor.black, for: .normal);
+                newbtn1.layer.borderColor = UIColor.black.cgColor;
+                newbtn1.layer.borderWidth = 1.0;
+                newbtn1.layer.masksToBounds = true;
+                newbtn1.addTarget(self, action: #selector(clickAction(btn:)), for: .touchUpInside);
+                self.view.addSubview(newbtn1);
+            }
+        }
+    }
+    
+    func clickAction(btn:UIButton) {
+        self.textDocumentProxy.insertText((btn.titleLabel?.text)!)
     }
 
 }
