@@ -46,6 +46,11 @@ class FirstViewController: UIViewController {
     
     func clickAction(btn:UIButton){
         
+        //self.shouldPerformSegue(withIdentifier: "keysetting", sender: self);
+        //self.shouldPerformSegue(withIdentifier:"keysetting" , sender: self);
+        //self.showDetailViewController(<#T##vc: UIViewController##UIViewController#>, sender: <#T##Any?#>)
+        self.performSegue(withIdentifier: "keysetting", sender: self);
+        
     }
 
 

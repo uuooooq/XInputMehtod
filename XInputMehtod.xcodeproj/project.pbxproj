@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E63A121E1F0DC11F006E5B1C /* KeySettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63A121D1F0DC11F006E5B1C /* KeySettingViewController.swift */; };
 		E6B558761F0AF5B7009DF306 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B558751F0AF5B7009DF306 /* AppDelegate.swift */; };
 		E6B558781F0AF5B7009DF306 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B558771F0AF5B7009DF306 /* FirstViewController.swift */; };
 		E6B5587A1F0AF5B7009DF306 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B558791F0AF5B7009DF306 /* SecondViewController.swift */; };
@@ -58,6 +59,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E63A121D1F0DC11F006E5B1C /* KeySettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeySettingViewController.swift; sourceTree = "<group>"; };
 		E6B558721F0AF5B7009DF306 /* XInputMehtod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XInputMehtod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6B558751F0AF5B7009DF306 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6B558771F0AF5B7009DF306 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				E6B5587E1F0AF5B7009DF306 /* Assets.xcassets */,
 				E6B558801F0AF5B7009DF306 /* LaunchScreen.storyboard */,
 				E6B558831F0AF5B7009DF306 /* Info.plist */,
+				E63A121D1F0DC11F006E5B1C /* KeySettingViewController.swift */,
 			);
 			path = XInputMehtod;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				E6B5587A1F0AF5B7009DF306 /* SecondViewController.swift in Sources */,
 				E6B558761F0AF5B7009DF306 /* AppDelegate.swift in Sources */,
 				E6B558781F0AF5B7009DF306 /* FirstViewController.swift in Sources */,
+				E63A121E1F0DC11F006E5B1C /* KeySettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -635,6 +639,7 @@
 				E6B5589E1F0AF5B7009DF306 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E6B5589F1F0AF5B7009DF306 /* Build configuration list for PBXNativeTarget "XInputMehtodTests" */ = {
 			isa = XCConfigurationList;
@@ -643,6 +648,7 @@
 				E6B558A11F0AF5B7009DF306 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E6B558A21F0AF5B7009DF306 /* Build configuration list for PBXNativeTarget "XInputMehtodUITests" */ = {
 			isa = XCConfigurationList;
@@ -651,6 +657,7 @@
 				E6B558A41F0AF5B7009DF306 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E6B558B11F0AF616009DF306 /* Build configuration list for PBXNativeTarget "InputMethod" */ = {
 			isa = XCConfigurationList;
@@ -659,6 +666,7 @@
 				E6B558B31F0AF616009DF306 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
