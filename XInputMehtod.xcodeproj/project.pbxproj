@@ -18,6 +18,8 @@
 		E6B558981F0AF5B7009DF306 /* XInputMehtodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B558971F0AF5B7009DF306 /* XInputMehtodUITests.swift */; };
 		E6B558AC1F0AF616009DF306 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B558AB1F0AF616009DF306 /* KeyboardViewController.swift */; };
 		E6B558B01F0AF616009DF306 /* InputMethod.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E6B558A91F0AF616009DF306 /* InputMethod.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E6BCFD8B1F1CDBCD009BC4B1 /* KeyBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BCFD8A1F1CDBCD009BC4B1 /* KeyBoard.swift */; };
+		E6BCFD8D1F1CDC79009BC4B1 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BCFD8C1F1CDC79009BC4B1 /* Key.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		E6B558A91F0AF616009DF306 /* InputMethod.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = InputMethod.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6B558AB1F0AF616009DF306 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		E6B558AD1F0AF616009DF306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6BCFD8A1F1CDBCD009BC4B1 /* KeyBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyBoard.swift; sourceTree = "<group>"; };
+		E6BCFD8C1F1CDC79009BC4B1 /* Key.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +148,8 @@
 				E6B558801F0AF5B7009DF306 /* LaunchScreen.storyboard */,
 				E6B558831F0AF5B7009DF306 /* Info.plist */,
 				E63A121D1F0DC11F006E5B1C /* KeySettingViewController.swift */,
+				E6BCFD8A1F1CDBCD009BC4B1 /* KeyBoard.swift */,
+				E6BCFD8C1F1CDC79009BC4B1 /* Key.swift */,
 			);
 			path = XInputMehtod;
 			sourceTree = "<group>";
@@ -344,8 +350,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6BCFD8D1F1CDC79009BC4B1 /* Key.swift in Sources */,
 				E6B5587A1F0AF5B7009DF306 /* SecondViewController.swift in Sources */,
 				E6B558761F0AF5B7009DF306 /* AppDelegate.swift in Sources */,
+				E6BCFD8B1F1CDBCD009BC4B1 /* KeyBoard.swift in Sources */,
 				E6B558781F0AF5B7009DF306 /* FirstViewController.swift in Sources */,
 				E63A121E1F0DC11F006E5B1C /* KeySettingViewController.swift in Sources */,
 			);
