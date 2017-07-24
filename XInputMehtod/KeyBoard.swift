@@ -11,21 +11,28 @@ import UIKit
 
 class KeyBoard: NSObject {
     
-    var keyBoardName:NSString
-    var keyBoardDesc:NSString
-    var keys:NSArray
+    var keyBoardName:String
+    var keyBoardDesc:String
+    var keys:Array<Key>
 
     
-    init(keyBoardName:NSString, keyBoardDesc:NSString) {
+    init(keyBoardName:String, keyBoardDesc:String) {
         
-        func createInitKeys() -> NSArray{
-            //return NSArray();
+        func createInitKeys() -> Array<Key>{
+            
+            var returnArr = [Key]()
             for i in 0...3 {
                 for j in 0...9 {
                     
-                    var tmpKey = Key.init(isCombine: false, isShow: true, keyDesc: "\(i)\(j)" as NSString, keyInputInfo: "keyinputinfo\(i)\(j)", keyTextColor: UIColor.gray, keyFontSize: 15, keyIndex: );
+                    let tmpKeyIndex = KeyIndex(rowIndex: i, columnIndex:j)
+            
+                    
+                    let tmpKey = Key.init(isCombine: false, isShow: true, keyDesc: "\(i)\(j)", keyInputInfo: "keyinputinfo\(i)\(j)", keyTextColor: UIColor.gray, keyFontSize: 15, keyIndex:tmpKeyIndex);
+                    returnArr.append(tmpKey)
                 }
+               
             }
+            return returnArr
         }
         
         self.keyBoardName = keyBoardName

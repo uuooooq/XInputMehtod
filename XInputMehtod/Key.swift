@@ -19,15 +19,15 @@ class Key: NSObject {
     // KeyInfo类属性
     var isCombine:Bool
     var isShow:Bool
-    var keyDesc:NSString
-    var keyInputInfo:NSString
+    var keyDesc:String
+    var keyInputInfo:String
     var keyTextColor:UIColor
     var keyFontSize:Int
     var keyIndex:KeyIndex
     
     // 初始化KeyInfo
-    init(isCombine:Bool, isShow:Bool, keyDesc:NSString,
-         keyInputInfo:NSString, keyTextColor:UIColor,
+    init(isCombine:Bool, isShow:Bool, keyDesc:String,
+         keyInputInfo:String, keyTextColor:UIColor,
          keyFontSize:Int, keyIndex:KeyIndex) {
         
         self.isCombine = isCombine

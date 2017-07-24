@@ -9,6 +9,8 @@
 import UIKit
 
 class KeySettingViewController: UIViewController {
+    
+    var keyinfo:Key?
 
     override func viewDidLoad() {
         super.viewDidLoad()

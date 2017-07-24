@@ -89,10 +89,10 @@
             </objects>
             <point key="canvasLocation" x="1767" y="-394"/>
         </scene>
-        <!--View Controller-->
+        <!--Key Setting View Controller-->
         <scene sceneID="Xbi-dk-IR0">
             <objects>
-                <viewController id="wBv-Uo-hX6" sceneMemberID="viewController">
+                <viewController id="wBv-Uo-hX6" customClass="KeySettingViewController" customModule="XInputMehtod" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OuT-fO-y3u"/>
                         <viewControllerLayoutGuide type="bottom" id="dwh-IZ-ucf"/>
