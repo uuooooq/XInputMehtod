@@ -11,6 +11,13 @@ import UIKit
 class KeySettingViewController: UIViewController {
     
     var keyinfo:Key?
+    @IBOutlet var isCombineControl:UISwitch!
+    @IBOutlet var isShowControl:UISwitch!
+    @IBOutlet var keyDescControl:UITextField!
+    @IBOutlet var keyInputInfoControl:UITextField!
+    @IBOutlet var keyTextColorControl:UITextField!
+    @IBOutlet var keyFontSizeControl:UITextField!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +28,19 @@ class KeySettingViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.isCombineControl.isOn = self.keyinfo!.isCombine
+        self.isShowControl.isOn = self.keyinfo!.isShow
+        self.keyDescControl.text = self.keyinfo!.keyDesc
+        self.keyInputInfoControl.text = self.keyinfo!.keyInputInfo
+        //keyTextColorControl.text = self.keyinfo!.keyTextColor
+        self.keyTextColorControl.text = UIColor.toHexString(with: self.keyinfo!.keyTextColor)
+        self.keyFontSizeControl.text = "\(self.keyinfo!.keyFontSize)"
+        
     }
     
 
