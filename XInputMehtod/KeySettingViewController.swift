@@ -8,15 +8,17 @@
 
 import UIKit
 
-class KeySettingViewController: UIViewController {
+class KeySettingViewController: UIViewController, UITextFieldDelegate {
     
-    var keyinfo:Key?
-    @IBOutlet var isCombineControl:UISwitch!
-    @IBOutlet var isShowControl:UISwitch!
-    @IBOutlet var keyDescControl:UITextField!
-    @IBOutlet var keyInputInfoControl:UITextField!
-    @IBOutlet var keyTextColorControl:UITextField!
-    @IBOutlet var keyFontSizeControl:UITextField!
+    //var keyinfo:Key?
+    var keyIndex:Int?
+    @IBOutlet weak var isCombineControl:UISwitch!
+    @IBOutlet weak var isShowControl:UISwitch!
+    @IBOutlet weak var keyDescControl:UITextField!
+    @IBOutlet weak var keyInputInfoControl:UITextField!
+    @IBOutlet weak var keyTextColorControl:UITextField!
+    @IBOutlet weak var keyFontSizeControl:UITextField!
+
     
 
     override func viewDidLoad() {
@@ -32,14 +34,14 @@ class KeySettingViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        self.isCombineControl.isOn = self.keyinfo!.isCombine
-        self.isShowControl.isOn = self.keyinfo!.isShow
-        self.keyDescControl.text = self.keyinfo!.keyDesc
-        self.keyInputInfoControl.text = self.keyinfo!.keyInputInfo
+        let key = KeyBoards.getKeyByKeyboard(name: "testKeyBaord", index: self.keyIndex!)
+        self.isCombineControl.isOn = key.isCombine
+        self.isShowControl.isOn = key.isShow
+        self.keyDescControl.text = key.keyDesc
+        self.keyInputInfoControl.text = key.keyInputInfo
         //keyTextColorControl.text = self.keyinfo!.keyTextColor
-        self.keyTextColorControl.text = UIColor.toHexString(with: self.keyinfo!.keyTextColor)
-        self.keyFontSizeControl.text = "\(self.keyinfo!.keyFontSize)"
+        self.keyTextColorControl.text = UIColor.toHexString(with: key.keyTextColor)
+        self.keyFontSizeControl.text = "\(key.keyFontSize)"
         
     }
     
@@ -53,5 +55,27 @@ class KeySettingViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // MARK: - TextField delegate 应该有数据完整性的检查和判断
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        let key = KeyBoards.getKeyByKeyboard(name: "testKeyBaord", index: self.keyIndex!)
+        if(self.keyDescControl == textField){
+            key.keyDesc = textField.text!
+        }
+        if(self.keyInputInfoControl == textField){
+            key.keyInputInfo = textField.text!
+        }
+        if(self.keyTextColorControl == textField){
+            key.keyTextColor = UIColor.toUIColor(with: textField.text!)
+        }
+        if(self.keyFontSizeControl == textField){
+            key.keyFontSize = Int(textField.text!)!
+        }
+        
+        
+    }
+    
+    
 
 }

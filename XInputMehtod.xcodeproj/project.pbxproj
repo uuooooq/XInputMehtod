@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E6112A0C1F2ACA4F00ECCF04 /* Keyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6112A0B1F2ACA4F00ECCF04 /* Keyboards.swift */; };
 		E61357B11F280F6800B04C71 /* UIColorHexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61357B01F280F6800B04C71 /* UIColorHexString.swift */; };
 		E63A121E1F0DC11F006E5B1C /* KeySettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63A121D1F0DC11F006E5B1C /* KeySettingViewController.swift */; };
 		E6B558761F0AF5B7009DF306 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B558751F0AF5B7009DF306 /* AppDelegate.swift */; };
@@ -62,6 +63,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E6112A0B1F2ACA4F00ECCF04 /* Keyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keyboards.swift; sourceTree = "<group>"; };
 		E61357B01F280F6800B04C71 /* UIColorHexString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorHexString.swift; sourceTree = "<group>"; };
 		E63A121D1F0DC11F006E5B1C /* KeySettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeySettingViewController.swift; sourceTree = "<group>"; };
 		E6B558721F0AF5B7009DF306 /* XInputMehtod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XInputMehtod.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,6 +155,7 @@
 				E6BCFD8A1F1CDBCD009BC4B1 /* KeyBoard.swift */,
 				E6BCFD8C1F1CDC79009BC4B1 /* Key.swift */,
 				E61357B01F280F6800B04C71 /* UIColorHexString.swift */,
+				E6112A0B1F2ACA4F00ECCF04 /* Keyboards.swift */,
 			);
 			path = XInputMehtod;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				E6B558761F0AF5B7009DF306 /* AppDelegate.swift in Sources */,
 				E6BCFD8B1F1CDBCD009BC4B1 /* KeyBoard.swift in Sources */,
 				E6B558781F0AF5B7009DF306 /* FirstViewController.swift in Sources */,
+				E6112A0C1F2ACA4F00ECCF04 /* Keyboards.swift in Sources */,
 				E63A121E1F0DC11F006E5B1C /* KeySettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

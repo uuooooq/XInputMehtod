@@ -12,14 +12,22 @@ class FirstViewController: UIViewController {
     
     @IBOutlet var inputMethodView : UIView!
     @IBOutlet var testTF : UITextField!
-    let keyboard = KeyBoard.init(keyBoardName: "testname", keyBoardDesc: "testDesc")
+    //let keyboard = KeyBoard.init(keyBoardName: "testname", keyBoardDesc: "testDesc")
     var indexValue:Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        addTmpBtns();
+        //addTmpBtns();
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let keyviews = self.inputMethodView.subviews
+        for tmpview in keyviews {
+            tmpview.removeFromSuperview()
+        }
+        addTmpBtns()
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,7 +42,7 @@ class FirstViewController: UIViewController {
         for i in 0...3 {
             for j in 0...9 {
                 let index = i*10+j;
-                let key = self.keyboard.keys[index]
+                let key = KeyBoards.getKeyByKeyboard(name: "testKeyBaord", index: index) //self.keyboard.keys[index]
                 print("this is default key \(key.keyDesc)")
                 let newbtn1 = UIButton(type: .roundedRect);
                 //newbtn1.frame = CGRect(x:j*btnWidth , y: i*48+48, width: btnWidth, height: 48);
@@ -60,10 +68,11 @@ class FirstViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //segue.destination.setValue("valuesss", forKey: "keyss")
-        let key = self.keyboard.keys[self.indexValue!]
+        //let key = KeyBoards.getKeyByKeyboard(name: "testKeyBaord", index: self.indexValue!)//self.keyboard.keys[self.indexValue!]
         let keyVC = segue.destination as! KeySettingViewController
-        keyVC.keyinfo = key
+        //keyVC.keyinfo = key
         //segue.destination.keyinfo = key
+        keyVC.keyIndex = self.indexValue
     }
 
 }
