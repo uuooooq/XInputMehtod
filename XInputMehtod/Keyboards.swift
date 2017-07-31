@@ -32,8 +32,9 @@ class KeyBoards: NSObject {
         self.keyboards[name] = keyboard
     }
     
-    class func updateKey(key:Key, keyBoardName:String) {
-        
+    class func updateKey(key:Key, keyBoardName:String, index:Int) {
+        let keyboard = self.getKeyboardBy(name: keyBoardName)
+        keyboard.keys[index] = key
     }
     
 }

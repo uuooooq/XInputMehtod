@@ -73,7 +73,9 @@ class KeySettingViewController: UIViewController, UITextFieldDelegate {
             key.keyFontSize = Int(textField.text!)!
         }
         
+        KeyBoards.updateKey(key: key, keyBoardName:"testKeyBaord" , index: self.keyIndex!)
         
+        print("update key info ...")
     }
     
     
