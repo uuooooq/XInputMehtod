@@ -27,7 +27,7 @@ class KeyBoard: NSObject {
                     let tmpKeyIndex = KeyIndex(rowIndex: i, columnIndex:j)
             
                     
-                    let tmpKey = Key.init(isCombine: false, isShow: true, keyDesc: "\(i)\(j)", keyInputInfo: "keyinputinfo\(i)\(j)", keyTextColor: UIColor.gray, keyFontSize: 15, keyIndex:tmpKeyIndex);
+                    let tmpKey = Key.init(isCombine: false, isShow: false, keyDesc: "\(i)\(j)", keyInputInfo: "keyinputinfo\(i)\(j)", keyTextColor: UIColor.gray, keyFontSize: 15, keyIndex:tmpKeyIndex);
                     returnArr.append(tmpKey)
                 }
                

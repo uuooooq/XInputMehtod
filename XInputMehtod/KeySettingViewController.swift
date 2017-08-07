@@ -78,6 +78,24 @@ class KeySettingViewController: UIViewController, UITextFieldDelegate {
         print("update key info ...")
     }
     
+    @IBAction func valueChangedAction(switchObj:UISwitch){
+        
+        let key = KeyBoards.getKeyByKeyboard(name: "testKeyBaord", index: self.keyIndex!)
+        
+        if(self.isShowControl == switchObj){
+            key.isShow = switchObj.isOn
+        }
+        if(self.isCombineControl == switchObj){
+            key.isCombine = switchObj.isOn
+        }
+        KeyBoards.updateKey(key: key, keyBoardName:"testKeyBaord" , index: self.keyIndex!)
+        
+        print("update key info ...")
+        
+        //return true
+    }
+    
+    
     
 
 }
