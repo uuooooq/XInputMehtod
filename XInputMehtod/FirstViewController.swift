@@ -72,10 +72,17 @@ class FirstViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //segue.destination.setValue("valuesss", forKey: "keyss")
         //let key = KeyBoards.getKeyByKeyboard(name: "testKeyBaord", index: self.indexValue!)//self.keyboard.keys[self.indexValue!]
-        let keyVC = segue.destination as! KeySettingViewController
+        //let keyVC = segue.destination as! KeySettingViewController
         //keyVC.keyinfo = key
         //segue.destination.keyinfo = key
-        keyVC.keyIndex = self.indexValue
+        //keyVC.keyIndex = self.indexValue
+        
+        if segue.destination is KeySettingViewController{
+            let keyVC = segue.destination as! KeySettingViewController
+            //keyVC.keyinfo = key
+            //segue.destination.keyinfo = key
+            keyVC.keyIndex = self.indexValue
+        }
     }
 
 }
