@@ -45,6 +45,9 @@ class KeyCombinViewController: UIViewController {
                 let index = i*10+j;
                 let key = KeyBoards.getKeyByKeyboard(name: "testKeyBaord", index: index) //self.keyboard.keys[index]
                 print("this is default key \(key.keyDesc)")
+                if key.isCombine {
+                    continue
+                }
                 let newbtn1 = UIButton(type: .roundedRect);
                 newbtn1.frame = CGRect(x: j*Int(btnWidth)+6, y: i*48+48+8, width: Int(btnWidth-6), height: 48-8)
                 newbtn1.setTitle(key.keyDesc, for: UIControlState.normal);
@@ -83,7 +86,25 @@ class KeyCombinViewController: UIViewController {
     }
     
     @IBAction func combineAction(btn:UIButton){
-        
+        let btnWidth = UIScreen.main.bounds.size.width/10;
+        print("this device's inputkey width is \(btnWidth)");
+        //let combineArr =
+        for i in 0...3 {
+            for j in 0...9 {
+                let index = i*10+j;
+                let key = KeyBoards.getKeyByKeyboard(name: "testKeyBaord", index: index) //self.keyboard.keys[index]
+                print("this is default key \(key.keyDesc)")
+                for tmpkey in self.currentKeyBox.keys {
+                    if tmpkey == key {
+                        //newbtn1.backgroundColor = UIColor.red
+                        key.isCombine = true
+                        KeyBoards.updateKey(key: key, keyBoardName: "testKeyBaord", index: index)
+                    }
+                }
+                
+            }
+        }
+        reflashKeys()
     }
 
     /*
