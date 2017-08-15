@@ -25,6 +25,10 @@ class KeyCombinViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        reflashKeys()
+    }
+    
+    func reflashKeys() {
         let keyviews = self.inputMethodView.subviews
         for tmpview in keyviews {
             tmpview.removeFromSuperview()
@@ -54,6 +58,13 @@ class KeyCombinViewController: UIViewController {
                 //                }
                 newbtn1.isHidden = key.isShow
                 
+                for tmpkey in self.currentKeyBox.keys {
+                    if tmpkey == key {
+                        newbtn1.backgroundColor = UIColor.red
+                    }
+                }
+                
+                
                 inputMethodView.addSubview(newbtn1);
             }
         }
@@ -65,6 +76,13 @@ class KeyCombinViewController: UIViewController {
         let key = KeyBoards.getKeyByKeyboard(name: "testKeyBaord", index: indexValue)
         //self.performSegue(withIdentifier: "keysetting", sender: self);
         print("the key \(key.keyDesc) is clicked at the moment")
+        
+        self.currentKeyBox.keys.append(key)
+        reflashKeys()
+        
+    }
+    
+    @IBAction func combineAction(btn:UIButton){
         
     }
 

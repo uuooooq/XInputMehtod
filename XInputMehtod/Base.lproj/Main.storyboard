@@ -288,6 +288,16 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="245" id="u1F-73-h90"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j93-Eb-Ud7">
+                                <rect key="frame" x="16" y="395" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="合并">
+                                    <color key="titleColor" red="0.13834879959999999" green="0.13834879959999999" blue="0.13834879959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="combineActionWithBtn:" destination="eZw-k8-5No" eventType="touchUpInside" id="STv-Iz-VXH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -302,7 +312,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m28-ni-v7Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1766" y="389"/>
+            <point key="canvasLocation" x="1765.5999999999999" y="388.15592203898052"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
