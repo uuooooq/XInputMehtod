@@ -279,8 +279,26 @@
                     <view key="view" contentMode="scaleToFill" id="rpf-Vy-Swy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lTf-sF-SrR">
+                                <rect key="frame" x="0.0" y="124" width="375" height="245"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="245" id="GNr-cM-Hmf"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="245" id="u1F-73-h90"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lTf-sF-SrR" firstAttribute="leading" secondItem="rpf-Vy-Swy" secondAttribute="leading" id="Pno-y5-kSK"/>
+                            <constraint firstItem="lTf-sF-SrR" firstAttribute="top" secondItem="9Fj-rf-NF1" secondAttribute="bottom" constant="60" id="cyn-YM-s8q"/>
+                            <constraint firstAttribute="trailing" secondItem="lTf-sF-SrR" secondAttribute="trailing" id="llc-Ib-D9G"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="inputMethodView" destination="lTf-sF-SrR" id="70p-RD-23g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m28-ni-v7Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

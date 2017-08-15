@@ -9,18 +9,23 @@
 import Foundation
 import UIKit
 
+struct KeyBox {
+    var keys:Array<Key>
+    var boxIndex:KeyIndex
+}
+
 class KeyBoard: NSObject {
     
     var keyBoardName:String
     var keyBoardDesc:String
-    var keys:Array<Key>
+    var keyBoxes:Array<KeyBox>
 
     
     init(keyBoardName:String, keyBoardDesc:String) {
         
-        func createInitKeys() -> Array<Key>{
+        func createInitKeys() -> Array<KeyBox>{
             
-            var returnArr = [Key]()
+            var returnArr = [KeyBox]()
             for i in 0...3 {
                 for j in 0...9 {
                     
@@ -28,7 +33,9 @@ class KeyBoard: NSObject {
             
                     
                     let tmpKey = Key.init(isCombine: false, isShow: false, keyDesc: "\(i)\(j)", keyInputInfo: "keyinputinfo\(i)\(j)", keyTextColor: UIColor.gray, keyFontSize: 15, keyIndex:tmpKeyIndex);
-                    returnArr.append(tmpKey)
+                    var tmpKeyBox = KeyBox(keys: [Key](), boxIndex: tmpKeyIndex)
+                    tmpKeyBox.keys.append(tmpKey)
+                    returnArr.append(tmpKeyBox)
                 }
                
             }
@@ -37,7 +44,7 @@ class KeyBoard: NSObject {
         
         self.keyBoardName = keyBoardName
         self.keyBoardDesc = keyBoardDesc
-        self.keys = createInitKeys()
+        self.keyBoxes = createInitKeys()
         
 
     }

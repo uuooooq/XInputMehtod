@@ -25,7 +25,7 @@ class KeyBoards: NSObject {
             self.createKeyBoardWith(name: name)
         }
         let keyboard = (self.keyboards[name])!
-        return keyboard.keys[index]
+        return keyboard.keyBoxes[index].keys[0]
     }
     class func createKeyBoardWith(name:String) {
         let keyboard = KeyBoard.init(keyBoardName: name, keyBoardDesc: "testDesc")
@@ -34,7 +34,7 @@ class KeyBoards: NSObject {
     
     class func updateKey(key:Key, keyBoardName:String, index:Int) {
         let keyboard = self.getKeyboardBy(name: keyBoardName)
-        keyboard.keys[index] = key
+        keyboard.keyBoxes[index].keys[0] = key
     }
     
 }
