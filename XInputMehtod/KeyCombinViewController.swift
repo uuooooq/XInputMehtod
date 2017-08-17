@@ -11,6 +11,9 @@ import UIKit
 class KeyCombinViewController: UIViewController {
     
     @IBOutlet var inputMethodView : UIView!
+    @IBOutlet var btn0:UIButton!
+    @IBOutlet var btn1:UIButton!
+    @IBOutlet var btn2:UIButton!
     var currentKeyBox:KeyBox = KeyBox(keys: [Key](), boxIndex:KeyIndex(rowIndex: 0,columnIndex: 0))
 
     override func viewDidLoad() {
@@ -106,7 +109,21 @@ class KeyCombinViewController: UIViewController {
         }
         reflashKeys()
     }
-
+    
+//    @IBAction func touchDownInside(btn:UIButton){
+//        //if(self.btn0.isSelected || self.btn1.isSelected || self.btn2.isSelected){
+//            self.btn0.isSelected = true
+//            self.btn1.isSelected = true
+//            self.btn2.isSelected = true
+//        //}
+//        
+//    }
+//    @IBAction func touchUpInside(btn:UIButton){
+//        self.btn0.isSelected = false
+//        self.btn1.isSelected = false
+//        self.btn2.isSelected = false
+//
+//    }
     /*
     // MARK: - Navigation
 
