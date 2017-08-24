@@ -47,7 +47,7 @@ class KeyCombinViewController: UIViewController {
             for j in 0...9 {
                 let index = i*10+j;
                 let key = KeyBoards.getKeyByKeyboard(name: "testKeyBaord", index: index) //self.keyboard.keys[index]
-                print("this is default key \(key.keyDesc)")
+                //print("this is default key \(key.keyDesc)")
                 if key.isCombine {
                     continue
                 }
@@ -109,6 +109,14 @@ class KeyCombinViewController: UIViewController {
         }
         reflashKeys()
     }
+    
+    
+    // 
+    func findMinKey(keys:Array<Key>) -> KeyIndex {
+        return KeyIndex(rowIndex: 0, columnIndex: 0)
+    }
+    
+    
     
 //    @IBAction func touchDownInside(btn:UIButton){
 //        //if(self.btn0.isSelected || self.btn1.isSelected || self.btn2.isSelected){
