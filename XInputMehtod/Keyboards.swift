@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-
+/// 继承自UIViewController
 class KeyBoards: NSObject {
     static var keyboards=[String: KeyBoard]()
     
@@ -32,6 +32,13 @@ class KeyBoards: NSObject {
         self.keyboards[name] = keyboard
     }
     
+    ///  Get the url of category of technology
+    ///
+    ///  - parameter key: Current page index
+    ///  - parameter keyBoardName:    How many rows to load
+    ///  - parameter index: xxxxx
+    ///
+    ///  - returns: The absolute url
     class func updateKey(key:Key, keyBoardName:String, index:Int) {
         let keyboard = self.getKeyboardBy(name: keyBoardName)
         keyboard.keyBoxes[index].keys[0] = key

@@ -14,6 +14,31 @@ struct KeyBox {
     var boxIndex:KeyIndex
 }
 
+/**
+ ## Feature Support
+ 
+ This class does some awesome things. It supports:
+ 
+ - Feature 1
+ - Feature 2
+ - Feature 3
+ 
+ ## Examples
+ 
+ Here is an example use case indented by four spaces because that indicates a
+ code block:
+ 
+ let myAwesomeThing = MyAwesomeClass()
+ myAwesomeThing.makeMoney()
+ 
+ ## Warnings
+ 
+ There are some things you should be careful of:
+ 
+ 1. Thing one
+ 2. Thing two
+ 3. Thing three
+ */
 class KeyBoard: NSObject {
     
     var keyBoardName:String

@@ -111,27 +111,32 @@ class KeyCombinViewController: UIViewController {
     }
     
     
-    // 
-    func findMinKey(keys:Array<Key>) -> KeyIndex {
+    /// 找出最小Key
+    func findMinKey(keysArr:Array<Key>) -> KeyIndex {
         return KeyIndex(rowIndex: 0, columnIndex: 0)
     }
     
+    /// 把已经选择的key按照列分离出来
+    func separateKeysToColumnArray() -> Array<Array<Key>> {
+        return [Array]()
+    }
+    
+    /// 把已经选择的key按照行分离出来
+    func separateKeysToRowArray() -> Array<Array<Key>> {
+        return [Array]()
+    }
+    
+    /// 判断keys是否连续
+    func isKeysSerial(keysArr:Array<Key>) -> Bool{
+        return true
+    }
+    
+    /// 判断每行和每列个数是否相等
+    func isSepareateKeysNumberEqual(separeateArr:Array<Array<Key>>) -> Bool {
+        return true
+    }
     
     
-//    @IBAction func touchDownInside(btn:UIButton){
-//        //if(self.btn0.isSelected || self.btn1.isSelected || self.btn2.isSelected){
-//            self.btn0.isSelected = true
-//            self.btn1.isSelected = true
-//            self.btn2.isSelected = true
-//        //}
-//        
-//    }
-//    @IBAction func touchUpInside(btn:UIButton){
-//        self.btn0.isSelected = false
-//        self.btn1.isSelected = false
-//        self.btn2.isSelected = false
-//
-//    }
     /*
     // MARK: - Navigation
 
