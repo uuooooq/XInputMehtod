@@ -111,28 +111,73 @@ class KeyCombinViewController: UIViewController {
     }
     
     
-    /// 找出最小Key
-    func findMinKey(keysArr:Array<Key>) -> KeyIndex {
+    /// 对给定的数组按下标从小到大排序
+    ///
+    /// - parameter keysArr: 给定的数组
+    /// - parameter isRow: 说明给定的数组排序是按row下标还是columen下标排序
+    func sortKeys(keysArr:Array<Key>, isRow:Bool) -> KeyIndex {
         return KeyIndex(rowIndex: 0, columnIndex: 0)
     }
     
     /// 把已经选择的key按照列分离出来
-    func separateKeysToColumnArray() -> Array<Array<Key>> {
-        return [Array]()
+    func separateKeysToColumnArray() -> Dictionary<Int, Array<Key>> {
+        
+        var separateDic = [Int:Array<Key>]()
+        for key in self.currentKeyBox.keys {
+            if((separateDic[key.keyIndex.columnIndex]) != nil){
+                separateDic[key.keyIndex.columnIndex]?.append(key)
+            }
+            else{
+                separateDic[key.keyIndex.columnIndex] = [key]
+            }
+        }
+        
+        
+        return separateDic
     }
     
     /// 把已经选择的key按照行分离出来
-    func separateKeysToRowArray() -> Array<Array<Key>> {
-        return [Array]()
+    func separateKeysToRowArray() -> Dictionary<Int, Array<Key>> {
+        
+        var separateDic = [Int:Array<Key>]()
+        for key in self.currentKeyBox.keys {
+            if((separateDic[key.keyIndex.rowIndex]) != nil){
+                separateDic[key.keyIndex.rowIndex]?.append(key)
+            }
+            else{
+                separateDic[key.keyIndex.rowIndex] = [key]
+            }
+        }
+        
+        
+        return separateDic
+
     }
     
-    /// 判断keys是否连续
-    func isKeysSerial(keysArr:Array<Key>) -> Bool{
+    /// 判断每行或者每列的keys是否连续
+    ///
+    /// - parameter keysDic: 里面保存分离号的key
+    /// - parameter isRow: 是用来说明这个字典的value中的keys是按row分离的还是按column分离
+    func isKeysSerial(keysDic:Dictionary<Int, Array<Key>>, isRow:Bool) -> Bool{
+        for(tmpKey, tmpValue) in keysDic{
+            
+            /// 如果isRow为真，判断column下标的值是否连续
+            /// 否则则判断row下标的值是否是连续的
+            if(isRow){
+                
+            }
+            else{
+                
+            }
+        }
         return true
     }
     
-    /// 判断每行和每列个数是否相等
-    func isSepareateKeysNumberEqual(separeateArr:Array<Array<Key>>) -> Bool {
+    /// 判断每行或者每列的个数是否相等
+    ///
+    /// - parameter separeateDic 里面保存分离号的key
+    /// - parameter isRow: 是用来说明这个字典的value中的keys是按row分离的还是按column分离
+    func isSepareateKeysNumberEqual(separeateDic:Dictionary<Int, Array<Key>>, isRow:Bool) -> Bool {
         return true
     }
     
